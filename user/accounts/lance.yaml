@@ -1,0 +1,11 @@
+email: longlivelance@gmail.com
+fullname: 'Lance Geng'
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$f9pPGXaDuIhGPrilifqB2emNFu3dNmAutwpUDZFQN3ZLKzJShW50W
