@@ -1,0 +1,25 @@
+<ul class="menu">
+  <li><input type="search" placeholder="Search" value="{{ query }}" data-search-input="{{ base_url }}{{ config.plugins.simplesearch.route}}/query" ></li>
+  <li><button class="button search" type="submit">Search</button></li>
+</ul>
+
+<script>
+  jQuery(window).load(function() {
+      var input = $('[data-search-input]');
+      var searchButton = $('.button.search');
+
+      input.on('keypress', function(event) {
+          if (event.which == 13 && input.val().length > 3) {
+              event.preventDefault();
+              window.location.href = input.data('search-input') + '{{ config.system.param_sep }}' + input.val();
+          }
+      });
+
+      searchButton.on('click', function(event) {
+          if (input.val().length > 3) {
+              event.preventDefault();
+              window.location.href = input.data('search-input') + '{{ config.system.param_sep }}' + input.val();
+          }
+      });
+  });
+</script>

@@ -1,0 +1,34 @@
+name: HAFCA
+version: 0.0.1
+description: "HAFCA is the theme developed for **Grav**"
+icon: empire
+author:
+  name: Lance Geng
+  email: longlivelance@gmail.command
+  url: http://longlivelance.com
+homepage: https://github.com/longlivelance/hafca
+keywords: hafca, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/longlivelance/hafca/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    default_lang:
+      type: text
+      size: x-small
+      label: Default lang
+      default: 'en'
+      validate:
+        type: text
+
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool

@@ -1,0 +1,63 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% if header.description %}
+        <meta name="description" content="{{ header.description }}">
+        {% else %}
+        <meta name="description" content="{{ site.description }}">
+        {% endif %}
+        {% if header.robots %}
+        <meta name="robots" content="{{ header.robots }}">
+        {% endif %}
+        <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
+
+        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+
+        {% block stylesheets %}
+            {# Bootstrap core CSS #}
+            {% do assets.add('theme://css/app.css',101) %}
+            {% do assets.add('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css') %}
+
+            {{ assets.css() }}
+        {% endblock %}
+
+        {% do assets.addJs('jquery',101) %}
+
+        {{ assets.js() }}
+        {% endblock head %}
+    </head>
+
+      <body>
+
+        {# include the header + navigation #}
+        {% include 'partials/header.html.twig' %}
+
+        <div class="row column">
+          <div id="content" class="small-12">
+            {% block content %}{% endblock %}
+          </div>
+        </div>
+
+        {% include 'partials/footer.html.twig' %}
+
+        {% block javascripts %}
+            {% do assets.addJs('theme://bower_components/what-input/what-input.min.js') %}
+            {% do assets.addJs('theme://bower_components/foundation-sites/dist/foundation.min.js') %}
+            {% do assets.addJs('theme://js/app.js') %}
+
+            {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+                {% do assets.addJs('https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js') %}
+                {% do assets.addJs('https://oss.maxcdn.com/respond/1.4.2/respond.min.js') %}
+            {% endif %}
+
+            {{ assets.js() }}
+        {% endblock %}
+
+    </body>
+    {% block bottom %}{% endblock %}
+</html>

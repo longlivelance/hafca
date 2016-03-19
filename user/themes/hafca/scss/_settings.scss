@@ -40,29 +40,43 @@
 //  35. Tooltip
 //  36. Top Bar
 
+/*green: 02A84B*/
+/*blue: 05B1D7*/
+/*peach: D77C79*/
+/*purple: 763C8E*/
+/*orange: F1AF59*/
+
 @import 'util/util';
 
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1170);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #02A84B,
-  secondary: #05B1D7,
-  success: #D77C79,
+  secondary: #D77C79,
+  success: #05B1D7,
   warning: #763C8E,
   alert: #F1AF59,
+
 );
+/* HAFCA Palette */
+$green: #02A84B;
+$blue: #05B1D7;
+$peach: #D77C79;
+$purple: #763C8E;
+$orange: #F1AF59;
+
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$dark-gray: #6c6c6c;
 $black: #0a0a0a;
 $white: #fefefe;
-$body-background: $white;
+$body-background-url: url(../images/tie-dye-bg-1.jpg);
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'SourceSansProRegular', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -266,7 +280,7 @@ $callout-border: 1px solid rgba($black, 0.25);
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;
-$callout-font-color-alt: $body-background;
+$callout-font-color-alt: $secondary-color;
 $callout-radius: $global-radius;
 $callout-link-tint: 30%;
 
@@ -306,9 +320,9 @@ $dropdown-sizes: (
 // 17. Dropdown Menu
 // -----------------
 
-$dropdownmenu-arrows: true;
+$dropdownmenu-arrows: false;
 $dropdownmenu-arrow-color: $anchor-color;
-$dropdownmenu-min-width: 200px;
+$dropdownmenu-min-width: 150px;
 $dropdownmenu-background: $white;
 $dropdownmenu-border: 1px solid $medium-gray;
 
@@ -334,7 +348,7 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
+$form-label-color: $dark-gray;
 $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
@@ -378,9 +392,9 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
+$menu-item-padding: 0;
 $menu-item-color-active: $white;
-$menu-item-background-active: map-get($foundation-palette, primary);
+$menu-item-background-active: $warning-color;
 $menu-icon-spacing: 0.25rem;
 
 // 23. Meter
@@ -558,8 +572,8 @@ $tooltip-radius: $global-radius;
 // 36. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-padding: rem-calc(5);
+$topbar-background: $white;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
