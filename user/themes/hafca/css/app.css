@@ -4198,7 +4198,7 @@ table.hover tr:nth-of-type(even):hover {
           animation-delay: 700ms !important; }
 
 body:before {
-  background: url(../images/tie-dye-bg-1.jpg) no-repeat center center fixed;
+  background: url(../images/tie-dye-bg-3.jpg) no-repeat center center fixed;
   background-size: cover;
   display: block;
   content: "";
@@ -4211,14 +4211,16 @@ body:before {
   opacity: .3; }
 
 .top-bar {
-  border-top: 3px solid #763C8E; }
+  border-top: 3px solid #763C8E;
+  padding: 0; }
   .top-bar .top-bar-title {
     color: #02A84B;
-    line-height: 80px;
     text-transform: uppercase;
     font-size: 18px;
     transition: all 0.5s ease-in-out;
     background: transparent; }
+    .top-bar .top-bar-title #logo {
+      margin: 0.1875rem 0; }
     @media screen and (max-width: 39.9375em) {
       .top-bar .top-bar-title {
         line-height: inherit;
@@ -4234,6 +4236,7 @@ body:before {
     .top-bar .menu li:hover > a > a {
       background-color: #763C8E;
       color: #fefefe;
+      border-bottom: 2px solid #763C8E;
       position: relative; }
       .top-bar .menu li.active > a:before,
       .top-bar .menu li:hover > a:before,
@@ -4252,18 +4255,40 @@ body:before {
         height: 100%;
         padding-top: 20px; }
     .top-bar .menu li > a {
-      padding: 38px 20px 26px;
+      padding: 34px 20px 34px;
+      border-top: 2px solid #fefefe;
+      border-bottom: 2px solid #fefefe;
       text-transform: uppercase;
       border-radius: 0;
       margin-left: 0;
       transition: all 0.4s ease; }
     .top-bar .menu ul.submenu li > a {
-      padding: 10px 20px !important; }
+      padding: 10px 20px !important;
+      border: 0; }
       .top-bar .menu ul.submenu li > a:before {
         content: ''; }
 
-#content {
-  background-color: #fefefe; }
+#header {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  min-width: 100%;
+  transition: all 0.2s ease-in-out; }
+  #header.small {
+    top: -5px; }
+    #header.small .top-bar-title #logo {
+      width: 160px; }
+    #header.small #main-nav .menu li > a {
+      padding: 27px 20px 25px; }
+      #header.small #main-nav .menu li > a:before {
+        padding-top: 10px; }
+
+#main {
+  margin-top: 89px; }
+  #main #content {
+    padding: 1rem;
+    background-color: #fefefe; }
 
 #footer {
   background-color: #fefefe;
@@ -4283,7 +4308,7 @@ ul.unstyled {
   list-style: none; }
 
 .margin-top {
-  margin-top: 80px; }
+  margin-top: 75px; }
 
 .footer {
   background-color: #fefefe;

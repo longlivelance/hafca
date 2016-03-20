@@ -9,14 +9,17 @@ body {
 }
 .top-bar {
   border-top: 3px solid $warning-color;
+  padding: 0;
   .top-bar-title {
     color: $primary-color;
-    line-height: 80px;
     text-transform: uppercase;
     font-size: 18px;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     background: transparent;
+    #logo {
+      margin: rem-calc(3) 0;
+    }
     @include breakpoint(small only) {
       line-height: inherit;
       width: 100%;
@@ -34,6 +37,7 @@ body {
     li:hover > a > a {
       background-color: $purple;
       color: $white;
+      border-bottom: 2px solid $purple;
       position: relative;
       &:before {
         position: absolute;
@@ -52,7 +56,9 @@ body {
       }
     }
     li > a {
-      padding: 38px 20px 26px;
+      padding: 34px 20px 34px;
+      border-top: 2px solid $white;
+      border-bottom: 2px solid $white;
       text-transform: uppercase;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
@@ -66,15 +72,55 @@ body {
     }
     ul.submenu li > a {
       padding: 10px 20px !important;
+      border: 0;
       &:before {
         content: '';
       }
     }
   }
 }
+#header {
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  min-width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  &.small {
+    top: -5px;
+    .top-bar-title {
+      #logo {
+        width: 160px;
+      }
+    }
+    #main-nav {
+      // height: 75px;
+      .menu {
+        li {
+          > a {
+            &:before {
+              padding-top: 10px;
+            }
+            padding: 27px 20px 25px;
+          }
+        }
+      }
+    }
+  }
+  #main-nav {
+    // height: 93px;
+  }
+}
 
-#content {
-  background-color: $white;
+
+#main {
+  margin-top: 89px;
+  #content {
+    padding: $global-padding;
+    background-color: $white;
+  }
 }
 #footer {
   background-color: $white;
@@ -97,7 +143,7 @@ ul.unstyled {
 }
 // footer CSS
 .margin-top {
-  margin-top: 80px;
+  margin-top: 75px;
 }
 .footer {
   background-color: $white;

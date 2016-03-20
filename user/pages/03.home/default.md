@@ -22,7 +22,7 @@ visible: false
             <p>CSAM is a specialty society of physicians founded in 1973.</p>
           </div>
           <div class="media-object-section">
-            <img src="csam-logo-black.png" class="float-center" style="width: 75px;" />
+            <img src="csam-logo-black-trans.png" class="float-center" style="width: 75px;" />
           </div>
         </div>
       </div>

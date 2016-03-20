@@ -37,9 +37,12 @@
         {# include the header + navigation #}
         {% include 'partials/header.html.twig' %}
 
-        <div class="row column">
-          <div id="content" class="small-12">
-            {% block content %}{% endblock %}
+        <div id="main">
+          <div class="colorful row column"></div>
+          <div class="row">
+            <div id="content" class="small-12 column">
+              {% block content %}{% endblock %}
+            </div>
           </div>
         </div>
 

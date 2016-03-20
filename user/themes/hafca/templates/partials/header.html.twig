@@ -15,40 +15,40 @@
         </li>
     {% endfor %}
 {% endmacro %}
-
-<nav class="top-bar" id="main-nav">
-  <div class="row column">
-    <div class="top-bar-title">
-      <a href="/"><img src="{{ url('theme://images/hafca-logo.png', true) }}" alt="Haight Ashbury &amp; Free Clinic Archives" class="show-for-medium" /></a>
-      <a href="/" class="site-title">Haight Ashbury &amp; Free Clinic Archives</a>
-      <span data-responsive-toggle="main-navigation" data-hide-for="medium">
-        <span class="menu-icon dark float-right" data-toggle></span>
-      </span>
-    </div>
-    <div id="main-navigation">
-      <div class="top-bar-left">
-
+<div id="header">
+  <nav class="top-bar" id="main-nav">
+    <div class="row column">
+      <div class="top-bar-title">
+        <a href="/"><img src="{{ url('theme://images/hafca-logo.png', true) }}" alt="Haight Ashbury &amp; Free Clinic Archives" class="show-for-medium" id="logo" /></a>
+        <a href="/" class="site-title">Haight Ashbury &amp; Free Clinic Archives</a>
+        <span data-responsive-toggle="main-navigation" data-hide-for="medium">
+          <span class="menu-icon dark float-right" data-toggle></span>
+        </span>
       </div>
-      <div class="top-bar-right">
-        <ul class="dropdown menu" data-dropdown-menu >
-          {% if theme_config.dropdown.enabled %}
-              {{ _self.loop(pages) }}
-          {% else %}
-            {% for page in pages.children %}
-            {% if page.visible %}
-            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-            <li class="top {{ current_page }}">
-              <a href="{{ p.url }}">
-                  {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
-                  {{ p.menu }}
-              </a>
-            </li>
+      <div id="main-navigation">
+        <div class="top-bar-left">
+
+        </div>
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu >
+            {% if theme_config.dropdown.enabled %}
+                {{ _self.loop(pages) }}
+            {% else %}
+              {% for page in pages.children %}
+              {% if page.visible %}
+              {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+              <li class="top {{ current_page }}">
+                <a href="{{ p.url }}">
+                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+                    {{ p.menu }}
+                </a>
+              </li>
+              {% endif %}
+              {% endfor %}
             {% endif %}
-            {% endfor %}
-          {% endif %}
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-<div class="colorful row column"></div>
+  </nav>
+</div>
