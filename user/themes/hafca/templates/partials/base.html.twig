@@ -32,18 +32,31 @@
         {% endblock head %}
     </head>
 
-      <body>
+      <body id="top" class="{{ page.header.body_classes }}">
 
         {# include the header + navigation #}
         {% include 'partials/header.html.twig' %}
 
         <div id="main">
+
+          {% include 'partials/subheader.html.twig' %}
+
           <div class="colorful row column"></div>
+
           <div class="row">
+
             <div id="content" class="small-12 column">
+
+              {% if config.plugins.breadcrumbs.enabled %}
+        				{% include 'partials/breadcrumbs.html.twig' %}
+        			{% endif %}
+
               {% block content %}{% endblock %}
+
             </div>
+
           </div>
+
         </div>
 
         {% include 'partials/footer.html.twig' %}

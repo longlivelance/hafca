@@ -1,4 +1,3 @@
-
 {% macro loop(page) %}
     {% for p in page.children.visible %}
         {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
@@ -15,12 +14,14 @@
         </li>
     {% endfor %}
 {% endmacro %}
+
+
 <div id="header">
   <nav class="top-bar" id="main-nav">
     <div class="row column">
       <div class="top-bar-title">
         <a href="/"><img src="{{ url('theme://images/hafca-logo.png', true) }}" alt="Haight Ashbury &amp; Free Clinic Archives" class="show-for-medium" id="logo" /></a>
-        <a href="/" class="site-title">Haight Ashbury &amp; Free Clinic Archives</a>
+        <a href="/" class="site-title">{{ site.title }}</a>
         <span data-responsive-toggle="main-navigation" data-hide-for="medium">
           <span class="menu-icon dark float-right" data-toggle></span>
         </span>
@@ -30,7 +31,7 @@
 
         </div>
         <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu >
+          <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
             {% if theme_config.dropdown.enabled %}
                 {{ _self.loop(pages) }}
             {% else %}

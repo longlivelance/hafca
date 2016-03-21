@@ -1,5 +1,6 @@
 ---
-title: Home
+title: 'Haight Ashbury & Free Clinic Archives'
+body_classes: home
 visible: false
 ---
 
