@@ -4208,7 +4208,8 @@ body:before {
   left: 0;
   right: 0;
   height: 100%;
-  opacity: .3; }
+  opacity: .3;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent)); }
 
 body #content {
   box-shadow: -7px 0px 10px 0px rgba(0, 0, 0, 0.25), 7px 0px 10px 0px rgba(0, 0, 0, 0.25); }
