@@ -47,6 +47,17 @@
               {% endif %}
               {% endfor %}
             {% endif %}
+            {% if config.plugins.simplesearch.enabled %}
+            <li><a>Search</a>
+              <ul class="menu">
+                <li>
+                  <div id="search">
+                    {% include 'partials/simplesearch_searchbox.html.twig' %}
+                  </div>
+                </li>
+              </ul>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>

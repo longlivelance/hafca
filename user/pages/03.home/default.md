@@ -27,16 +27,19 @@ visible: false
           </div>
         </div>
       </div>
-      <a href="/addiction-resources" class="warning small button small-6 float-center">Learn More</a>
+      <a href="/addiction-resources" class="warning small small-4 margin-top button float-center">Learn More</a>
     </div>
   </div>
   <div class="home-box two small-12 medium-6" data-equalizer-watch>
     <div class="background"></div>
     <div class="content">
       <h5>Haight Ashbury Free Clinic &amp; Free Clinic Movement</h5>
-      <ul>
-
-      </ul>
+      <div class="row column">
+        <div class="small-12 column">
+          The Haight Ashbury Free Medical Clinic opened in June of 1967 during the peak of the Summer of Love. The events leading up to its founding began to escalate in 1966 with the Human Be-In in Golden Gate Park, which attracted a large number of counter culture young people, deeply involved in the pot and acid culture which had just begun in the Haight Ashbury district of San Francisco.
+        </div>
+      </div>
+      <a href="/addiction-resources" class="primary small button small-4 margin-top float-center">Learn More</a>
     </div>
   </div>
 </div>

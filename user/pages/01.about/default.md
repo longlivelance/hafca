@@ -16,7 +16,7 @@ title: 'About Us'
 <div class="media-object stack-for-small">
 	<div class="media-object-section">
     <div class="thumbnail">
-			<img alt="David E. Smith, MD" src="/user/pages/01.about/large_david-smith.jpg">
+			<img alt="David E. Smith, MD" src="/user/pages/01.about/large_david-smith.jpg" style="width: 180px; height: 180px;">
     </div>
   </div>
 	<div class="media-object-section">

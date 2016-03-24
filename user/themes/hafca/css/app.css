@@ -452,7 +452,7 @@ th {
   padding: 0; }
 
 .foundation-mq {
-  font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em"; }
+  font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em&xxxlarge=120em"; }
 
 html {
   font-size: 100%;
@@ -4271,12 +4271,16 @@ body #content {
       text-transform: uppercase;
       border-radius: 0;
       margin-left: 0;
+      white-space: nowrap;
       transition: all 0.4s ease; }
     .top-bar .menu ul.submenu li > a {
       padding: 10px 20px !important;
       border: 0; }
       .top-bar .menu ul.submenu li > a:before {
         content: ''; }
+
+#search {
+  padding: 1rem; }
 
 #header {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
@@ -4291,6 +4295,8 @@ body #content {
       width: 160px; }
     #header.small #main-navigation .is-drilldown {
       min-height: 60px !important; }
+    #header.small #main-navigation .menu li a {
+      white-space: nowrap; }
     #header.small #main-navigation .menu li > a {
       padding: 37px 20px 15px; }
       #header.small #main-navigation .menu li > a:before {
@@ -4325,8 +4331,9 @@ body #content {
       padding-left: 0; }
 
 #subheader {
-  background: url(../images/subheaders/subheader-1-bg.jpg);
-  background-position-y: -670px;
+  background: url(../images/subheaders/subheader-2-bg.jpg);
+  background-position-x: center;
+  background-size: cover;
   height: 215px; }
   #subheader h1 {
     padding-top: 1rem;
