@@ -2,21 +2,20 @@
 title: 'About Us'
 ---
 
-<p>The Haight Ashbury &amp; Free Clinic Archives (HAFCA) is a collection of material that David E. Smith, MD,&nbsp;founder of the Haight Ashbury Free Medical Clinic believes is important to the development of free and community clinics in the U.S., the history of the field of addiction medicine, the impact of the Haight&nbsp;Ashbury neighborhood on society and culture, and the xxxx of resources for drug education and&nbsp;awareness. The Archives is a project of the David E. Smith Family Foundation.</p>
+The Haight Ashbury &amp; Free Clinic Archives (HAFCA) is a collection of material that David E. Smith, MD,&nbsp;founder of the Haight Ashbury Free Medical Clinic believes is important to the development of free and community clinics in the U.S., the history of the field of addiction medicine, the impact of the Haight&nbsp;Ashbury neighborhood on society and culture, and the xxxx of resources for drug education and&nbsp;awareness. The Archives is a project of the David E. Smith Family Foundation.
 
-<h2>David E. Smith Family Foundation</h2>
+##David E. Smith Family Foundation
 
-<p>The David E. Smith Family Foundation provides support in the areas of education, health&nbsp;and recovery from addiction.&nbsp;</p>
+The David E. Smith Family Foundation provides support in the areas of education, health&nbsp;and recovery from addiction.
 
-<p><a href="http://smithfamilyfoundation.com" target="_blank">http://smithfamilyfoundation.com</a>&nbsp; &nbsp;<span class="glyphicon glyphicon-new-window">&nbsp;</span></p>
+[http://smithfamilyfoundation.com](http://smithfamilyfoundation.com "Smith Family Foundation")
 
-<h2>Advisory Board</h2>
-
+##Advisory Board
 
 <div class="media-object stack-for-small">
 	<div class="media-object-section">
     <div class="thumbnail">
-			<img alt="David E. Smith, MD" src="/user/pages/01.about/large_david-smith.jpg" style="width: 180px; height: 180px;">
+		<img alt="David E. Smith, MD" src="/user/pages/01.about/large_david-smith.jpg" style="width: 180px; height: 180px;">
     </div>
   </div>
 	<div class="media-object-section">
