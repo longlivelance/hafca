@@ -59,6 +59,10 @@ RewriteRule ^(LICENSE.txt|composer.lock|composer.json|\.htaccess)$ error [F]
 
 </IfModule>
 
+<FilesMatch \.php$>
+    SetHandler php56-cgi
+</FilesMatch>
+
 # Begin - Prevent Browsing and Set Default Resources
 Options -Indexes
 DirectoryIndex index.php index.html index.htm
